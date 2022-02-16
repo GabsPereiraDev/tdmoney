@@ -1,11 +1,17 @@
-import { Dashboard } from '../Dashboard/indext'
+import {useContext} from 'react'
 import IncomeImg from '../../assets/income.svg'
 import OutComeImg from '../../assets/outcome.svg'
 import TotalImg from '../../assets/total.svg'
+import { TransactionsContext } from '../../TransactionsContext'
 import {Container} from './style'
 
 
 export function Summary(){
+
+
+    const data = useContext(TransactionsContext)
+
+
     return(
         <Container>
             <div>
