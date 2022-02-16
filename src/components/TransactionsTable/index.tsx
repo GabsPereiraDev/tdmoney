@@ -1,15 +1,16 @@
 import { useContext, useEffect, useState } from 'react';
 import { api } from '../../api/transactions';
-import { TransactionsContext } from '../../TransactionsContext';
+import { useTransaction } from '../../hooks/useTransaction';
+
 import { Container } from './style';
 
 
 
 
 export function TransactionsTable() {
-    const transactions = useContext(TransactionsContext)
+    const {transactions} = useTransaction()
 
-    console.log(transactions)
+  
 
 
     return (
